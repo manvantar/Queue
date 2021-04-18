@@ -61,4 +61,22 @@ public class Queue {
         return size;
     }
 
+        /* This method is used to delete old added Node
+    @return DeletedNode
+     */
+
+    public INode pop() {
+        if(head.getNext()!=null) {
+            INode tempINode = this.head;
+            this.head = this.head.getNext();
+            return tempINode;
+        }
+        else{
+            INode tempINode = this.head;
+            this.head=null;
+            return tempINode;
+        }
+    }
+
+
 }
