@@ -18,5 +18,22 @@ public class QueueTester {
         String result2 = Queue2.printMyNodes();
         Assertions.assertEquals("30->56->70", result2);
     }
-    
+
+    @Test
+    public void testpop(){
+        Queue Queue2 = new Queue();
+        Queue2.push(node1);
+        Queue2.push(node2);
+        Queue2.push(node3);
+        INode result=Queue2.pop();
+        Assertions.assertEquals(node1,result);
+        Queue2.printMyNodes();
+        INode result2=Queue2.pop();
+        Queue2.printMyNodes();
+        Assertions.assertEquals(node2,result2);
+        INode result5=Queue2.pop();
+        Assertions.assertEquals(node3,result5);
+        Queue2.printMyNodes();
+    }
+
 }
